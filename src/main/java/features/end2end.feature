@@ -22,3 +22,10 @@ Feature: End to End API
           Given User Delete a product
           When User call with Delete with http request
           Then The API Delete call got success with message
+
+          Scenario: Regitser User
+            Given User Payload personal Informations
+            When User calls Signup with Post http request
+            Then The API Signup call for success with status code 200
+            Then Validate the message response
+
